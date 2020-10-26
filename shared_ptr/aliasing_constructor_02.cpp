@@ -40,15 +40,14 @@ int main()
 
 	auto spm = shared_ptr<Member>(sp, &sp->mx);
 
-	cout << spm.use_count() << "\n";
-	cout << sp.use_count() << "\n";
-
+	cout << "spm.use_count() = " << spm.use_count() << "\n";
+	cout << "sp.use_count()  = " << sp.use_count() << "\n";
 	getchar();
 
 	sp.reset();
 
-	cout << spm.use_count() << "\n";
-	cout << sp.use_count() << "\n";
+	cout << "spm.use_count() = " << spm.use_count() << "\n";
+	cout << "sp.use_count()  = " << sp.use_count() << "\n";
 	getchar();
 
 }
