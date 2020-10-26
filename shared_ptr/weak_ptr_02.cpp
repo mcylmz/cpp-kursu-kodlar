@@ -9,7 +9,7 @@ int main()
 	weak_ptr<Date> wp{ sptr };
 
 	cout << "sptr.use_count() = " << sptr.use_count() << "\n";
-	//wp.reset();
+	//sptr.reset();
 	//cout << "wp.use_count() = " << wp.use_count() << "\n";
 	//cout << boolalpha << wp.expired() << "\n";
 	//if (shared_ptr<Date> sp = wp.lock()) {
