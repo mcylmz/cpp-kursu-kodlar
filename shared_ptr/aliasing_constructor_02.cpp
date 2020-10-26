@@ -1,6 +1,5 @@
 #include <iostream>
 #include <memory>
-#include <conio.h>
 
 
 class Member {
@@ -44,10 +43,12 @@ int main()
 	cout << spm.use_count() << "\n";
 	cout << sp.use_count() << "\n";
 
-	_getch();
+	getchar();
 
 	sp.reset();
 
 	cout << spm.use_count() << "\n";
 	cout << sp.use_count() << "\n";
+	getchar();
+
 }
