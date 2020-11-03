@@ -1,6 +1,4 @@
 #include <iostream>
-#include <string>
-
 
 class Base {
 public:
@@ -13,7 +11,6 @@ public:
 	{
 		std::cout << "Base copy ctor\n";
 	}
-
 };
 
 class Der : public Base {
