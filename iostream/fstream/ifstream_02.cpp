@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	ifstream ifs{ "bad_weakptr.txt" };
+	ifstream ifs{ ali.txt" };
 	if (!ifs) {
 		cerr << "dosya acilamadi\n";
 		return 1;
@@ -20,7 +20,7 @@ int main()
 	ifs.close();
 	std::cout << "\nbir tusa basiniz : "; getchar();
 
-	ifs.open("weakptr_1.txt");
+	ifs.open("veli.txt");
 	
 	while (ifs.get(c)) {
 		cout << c;
