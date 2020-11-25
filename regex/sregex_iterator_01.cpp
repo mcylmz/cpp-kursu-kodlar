@@ -3,8 +3,6 @@
 #include <string>
 #include <vector>
 #include <regex>
-#include <conio.h>
-
 
 std::vector<std::string> get_svec(const std::string &fname)
 {
@@ -44,9 +42,7 @@ int main()
 			cout << iter->str() << " ";
 		}
 		std::cout << "\n\n";
-		_getch();
+		(void)getchar();
 		std::system("cls");
 	}
 }
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
