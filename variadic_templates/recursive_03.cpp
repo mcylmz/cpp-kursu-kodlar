@@ -1,4 +1,4 @@
-emplate<typename T>
+template<typename T>
 T summer(T v)
 {
 	return v;
