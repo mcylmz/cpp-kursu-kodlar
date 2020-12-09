@@ -1,0 +1,25 @@
+Bir _thread_ nesnesi bir _thread_ ile ilişkilendirilmiş olabilir ya da olmayabilir. 
+<br>
+Yani bir _thread_ nesnesi bir _thread_'i kontrol ediyor ya da etmiyor olabilir.
+<br>
+Bir thread'i kontrol etmekte olan thread nesnesi "joinable" durumdadır. 
+
+thread sınıfının kurucu işlevi "unjoinable" bir thread nesnesi oluşturur.
+
+thread nesnesinin hayatı bittiğinde eğer thread joinable durumda ise çağırılan sonlandırıcı işlev std::terminate işlevini çağırır. (exception gönderilmiyor)
+
+thread nesneleri kopyalanamaz ama taşınabilir. (non-copyable but moveable)
+
+thread joinable durumda değilken join/detach edilir ise exception throw eder. (invalid argument)
+
+Her thread'in bir id'si vardır. 
+
+joinable tüm threadlerin id'leri birbirinden farklıdır.
+
+unjoinable thread'lerin hepsi aynı id'ye sahiptir (Örneğin 0 değeri).
+
+Bir thread'in id'si sınıfın get_id işlevi ile ya da ilgili thread içinde static get_thread_id işleviyle elde edilebilir.
+
+_thread_ sınıfının kurucu işlevine çağrılabilir bir varlığı _(callable)_ ve onun çağrılması için gerekli argümanları gönderebiliriz.
+
+Böylece oluşturulan yeni thread içinde gönderdiğimiz çağrılabilir gönderdiğimiz argümanlarla çağrılır.
