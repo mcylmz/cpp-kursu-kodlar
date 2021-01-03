@@ -10,12 +10,20 @@ class Functor {
 	int mx;
 public:
 	Functor(int x) : mx{ x } {}
-	int operator()(int val)const { return val * mx; }
+	int operator()(int val)const 
+	{ 
+		std::cout << "int Functor::operator()(int)\n";
+		return val * mx; 
+	}
 };
 
 class Myclass {
 public:
-	static int foo(int x) { return x * x * x; }
+	static int foo(int x) 
+	{
+		std::cout << "int Myclass::foo(int)\n";
+		return x * x * x;
+	}
 };
 
 
@@ -31,15 +39,14 @@ int main()
 	//vector<function<int(int)>> fcvec;
 	vector<fnc> fcvec;
 
-	fcvec.emplace_back([](int x) {return x * x; });
+	fcvec.emplace_back([](int x) 
+		{cout << "lambda\n";  return x * x; });
 	fcvec.emplace_back(&Myclass::foo);
 	fcvec.emplace_back(gf);
 	fcvec.emplace_back(Functor{ 15 });
 	//
 
-	size_t idx{};
-	///
-	auto val = fcvec[idx](4);
-	std::cout << "val = " << val << "\n";
+	for (auto& f : fcvec)
+		cout << f(10) << "\n";
 
 }
