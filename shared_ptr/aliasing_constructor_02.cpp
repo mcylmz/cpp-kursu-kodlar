@@ -42,12 +42,12 @@ int main()
 
 	cout << "spm.use_count() = " << spm.use_count() << "\n";
 	cout << "sp.use_count()  = " << sp.use_count() << "\n";
-	getchar();
+	(void)getchar();
 
 	sp.reset();
 
 	cout << "spm.use_count() = " << spm.use_count() << "\n";
 	cout << "sp.use_count()  = " << sp.use_count() << "\n";
-	getchar();
+	(void)getchar();
 
 }
