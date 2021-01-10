@@ -18,6 +18,4 @@ int main()
 	catch (const exception& ex) {
 		cout << "hata yakalandi : " << ex.what() << "\n";
 	}
-
-
 }
