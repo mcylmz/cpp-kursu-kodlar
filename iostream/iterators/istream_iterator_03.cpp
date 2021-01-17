@@ -6,5 +6,6 @@ using namespace std;
 
 int main()
 {
-	cout << accumulate(istream_iterator<int>{cin}, {}, 0) << "\n";
+	cout << "sayilari giriniz: " << 
+	accumulate(istream_iterator<int>{cin}, {}, 0) << "\n";
 }
