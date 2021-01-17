@@ -7,11 +7,12 @@ int main()
 	int x{};
 
 	cout << "bir sayi giriniz: ";
+	cout << boolalpha;
 	cin >> x;
 
-	cout << boolalpha << "eof : " << cin.eof() << "\n";
-	cout << boolalpha << "fail : " << cin.fail() << "\n";
-	cout << boolalpha << "bad : " << cin.bad() << "\n";
+	cout << "eof : " << cin.eof() << "\n";
+	cout << "fail : " << cin.fail() << "\n";
+	cout << "bad : " << cin.bad() << "\n";
 
 	cout << "girdiginiz sayi = " << x << "\n";
 }
