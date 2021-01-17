@@ -5,8 +5,9 @@ int main()
 	using namespace std;
 	int x{};
 
+	cout << hex << uppercase;
 	//while (cin.operator>>(x).operator bool())
 	while (cin >> x) {
-		cout << hex << x << "\n";
+		cout << "[" << x << "]\n";
 	}
 }
