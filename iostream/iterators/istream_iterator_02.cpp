@@ -7,7 +7,7 @@ int main()
 {
 	using namespace std;
 
-	ifstream ifs{ "asal1000000_10.txt" };
+	ifstream ifs{ "asal.txt" };
 	if (!ifs) {
 		cerr << "dosya acilamadi\n";
 		return 1;
