@@ -25,5 +25,7 @@ int main()
 
 	cout << x.count() << "\n";
 	cout << milliseconds{ x }.count() << "\n";
+	cout << frame{ x }.count() << "\n";
+	cout << duration_cast<Day>(x).count() << "\n";
 	cout << x << "\n" << milliseconds{ x } << "\n";
 }
