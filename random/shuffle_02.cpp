@@ -1,6 +1,5 @@
 #include <string>
 #include <random>
-#include <conio.h>
 #include <iostream>
 #include <algorithm>
 
@@ -16,7 +15,7 @@ int main()
 	while (true) {
 		cout << s << "\n";
 		shuffle(begin(s), end(s), eng);
-		(void)_getch();
+		(void)getchar();
 		std::system("cls");
 	}
 }
