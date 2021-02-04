@@ -1,4 +1,4 @@
-//shared_ptralias constructor
+//shared_ptr alias constructor
 
 /*
 	shared_ptr ile hayatı kontrol edilen bir sınıf nesnesinin veri elemanlarından birini 
