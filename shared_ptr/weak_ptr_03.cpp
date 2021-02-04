@@ -1,4 +1,6 @@
 #include "date.h"
+#include <memory>
+#include <iostream>
 
 
 int main()
@@ -8,7 +10,7 @@ int main()
 	weak_ptr<Date> wp{ sptr };
 
 	cout << "sptr.use_count() = " << sptr.use_count() << "\n";
-	wp.reset();
+	//wp.reset();
 	cout << "wp.use_count() = " << wp.use_count() << "\n";
 	cout << boolalpha << wp.expired() << "\n";
 	if (!wp.expired()) {
