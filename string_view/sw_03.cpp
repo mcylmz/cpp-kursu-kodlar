@@ -5,16 +5,18 @@ int main()
 {
 	using namespace std;
 
+	cout << boolalpha;
+
 	string_view sv;
-	cout << boolalpha << (sv.data() == nullptr) << "\n";
-	cout << boolalpha << sv.empty() << "\n";
-	cout << boolalpha << (sv.size() == 0) << "\n";
+	cout << (sv.data() == nullptr) << "\n";
+	cout << sv.empty() << "\n";
+	cout << (sv.size() == 0) << "\n";
 	cout << "\n\n";
 
 	sv = "ali";
-	cout << boolalpha << (sv.data() == nullptr) << "\n";
-	cout << boolalpha << sv.empty() << "\n";
-	cout << boolalpha << (sv.size() == 0) << "\n";
+	cout << (sv.data() == nullptr) << "\n";
+	cout << sv.empty() << "\n";
+	cout << (sv.size() == 0) << "\n";
 	cout << "\n\n";
 }
 
