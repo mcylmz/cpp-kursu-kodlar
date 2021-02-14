@@ -27,7 +27,7 @@ int main()
 	using namespace std;
 	using namespace literals;
 
-	cout << sizeof(any) << "\n";
+	cout << "sizeof(any)        = " << sizeof(any) << "\n";
 	cout << "sizeof (type_info) = " << sizeof(type_info) << "\n";
 
 	any ax = 10;
