@@ -1,3 +1,6 @@
+
+//yakaladığımız hata nesnesini değiştirip (set edip) onu yeniden gönderebiliriz (rethrow edebiliriz.)
+
 #include <string>
 
 class MyException {
