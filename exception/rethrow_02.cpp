@@ -9,7 +9,9 @@ void func()
 	}
 	catch (const std::exception& ex) {
 		std::cout << "hata func icinde yakalandi : " << ex.what() << "\n";
+		//iki farklı throw statement arasındaki farkı görünüz.
 		throw ex;
+		//throw; 
 	}
 }
 
