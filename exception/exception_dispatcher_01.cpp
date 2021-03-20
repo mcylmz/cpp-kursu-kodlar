@@ -1,4 +1,5 @@
 //exception dispatcher
+//önemli bir exception idiyomu
 
 class NecException {
 
