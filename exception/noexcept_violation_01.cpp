@@ -12,6 +12,9 @@ void foo()noexcept
 	func();
 }
 
+// foo fonksiyonu noexcept olarak nitelendiğinden çalışma zamanında exception gönderdiğinde
+//derleyici terminate işlevini çağıracak. Yani aşağıdaki kodda exception yakalanamayacak.
+
 int main()
 {
 	std::set_terminate(&my_terminate);
