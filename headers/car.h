@@ -1,231 +1,100 @@
-#pragma once
+#ifndef CAR_H
+#define CAR_H
 
-#include "car.h"
-#include <iostream>
-#include "nutility.h"
+#include <ostream>
 
-
-void Bmw::start()
-{
-	std::cout << "Bmw has just started\n";
-}
-
-void Bmw::run()
-{
-	std::cout << "Bmw is running\n";
-}
-
-void Bmw::stop()
-{
-	std::cout << "Bmw has just stopped\n";
-}
-
-Bmw* Bmw::clone()
-{
-	return new Bmw;
-}
-
-void Bmw::print(std::ostream& os)const
-{
-	os << "I am a Bmw\n";
-}
-
+class Car {
+public:
+	virtual void start() = 0;
+	virtual void run() = 0;
+	virtual void stop() = 0;
+	virtual ~Car() {}
+	virtual Car* clone() = 0;
+	virtual void print(std::ostream&)const = 0;
+};
 
 //--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
 
-void Dacia::start()
-{
-	std::cout << "Dacia has just started\n";
-}
-
-void Dacia::run()
-{
-	std::cout << "Dacia is running\n";
-}
-
-void Dacia::stop()
-{
-	std::cout << "Dacia has just stopped\n";
-}
-
-void Dacia::print(std::ostream& os)const
-{
-	os << "I am a Dacia\n";
-}
-
-Dacia* Dacia::clone()
-{
-	return new Dacia;
-}
+class Bmw  : public Car {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	virtual void stop() override;
+	Bmw* clone() override;
+	virtual void print(std::ostream&)const override;
+};
 
 //--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
 
-void Volvo::start()
-{
-	std::cout << "Volvo has just started\n";
-}
-
-void Volvo::run()
-{
-	std::cout << "Volvo is running\n";
-}
-
-void Volvo::stop()
-{
-	std::cout << "Volvo has just stopped\n";
-}
-
-void Volvo::print(std::ostream& os)const
-{
-	os << "I am a Volvo\n";
-}
-
-Volvo* Volvo::clone()
-{
-	return new Volvo;
-}
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-
-void Mercedes::start()
-{
-	std::cout << "Mercedes has just started\n";
-}
-
-void Mercedes::run()
-{
-	std::cout << "Mercedes is running\n";
-}
-
-void Mercedes::stop()
-{
-	std::cout << "Mercedes has just stopped\n";
-}
-
-void Mercedes::open_sunroof()
-{
-	std::cout << "Mercedes'in cam tavani acildi\n";
-}
-
-void Mercedes::print(std::ostream& os)const
-{
-	os << "I am a Mercedes\n";
-}
-
-Mercedes* Mercedes::clone()
-{
-	return new Mercedes;
-}
+class Dacia : public Car {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	Dacia* clone() override;
+	virtual void stop() override;
+	virtual void print(std::ostream&)const override;
+};
 
 //--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
 
-void MercedesS500::start()
-{
-	std::cout << "MercedesS500 has just started\n";
-}
-
-void MercedesS500::run()
-{
-	std::cout << "MercedesS500 is running\n";
-}
-
-void MercedesS500::stop()
-{
-	std::cout << "MercedesS500 has just stopped\n";
-}
-
-void MercedesS500::print(std::ostream& os)const
-{
-	os << "I am a MercedesS500\n";
-}
-
-MercedesS500* MercedesS500::clone()
-{
-	return new MercedesS500;
-}
+class Volvo : public Car {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	virtual void stop() override;
+	Volvo* clone() override;
+	virtual void print(std::ostream&)const override;
+};
 
 //--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
 
-void Renault::start()
-{
-	std::cout << "Renault has just started\n";
-}
-
-void Renault::run()
-{
-	std::cout << "Renault is running\n";
-}
-
-void Renault::stop()
-{
-	std::cout << "Renault has just stopped\n";
-}
-
-void Renault::print(std::ostream& os)const
-{
-	os << "I am a Renault\n";
-}
-
-Renault* Renault::clone()
-{
-	return new Renault;
-}
-//--------------------------------------------------------------------------------------------
-
-void Fiat::start()
-{
-	std::cout << "Fiat has just started\n";
-}
-
-void Fiat::run()
-{
-	std::cout << "Fiat is running\n";
-}
-
-void Fiat::stop()
-{
-	std::cout << "Fiat has just stopped\n";
-}
-
-void Fiat::print(std::ostream& os)const
-{
-	os << "I am a Fiat\n";
-}
-
-Fiat* Fiat::clone()
-{
-	return new Fiat;
-}
+class Mercedes : public Car {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	virtual void stop() override;
+	void open_sunroof();
+	Mercedes* clone() override;
+	virtual void print(std::ostream&)const override;
+};
 
 //--------------------------------------------------------------------------------------------
+
+class MercedesS500 : public Mercedes {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	virtual void stop() override;
+	MercedesS500* clone() override;
+	virtual void print(std::ostream&)const override;
+};
+
 //--------------------------------------------------------------------------------------------
 
-std::ostream& operator<<(std::ostream& os, const Car& c)
-{
-	c.print(os);
-	return os;
-}
+class Renault : public Car {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	virtual void stop() override;
+	Renault* clone() override;
+	virtual void print(std::ostream&)const override;
+};
 
 //--------------------------------------------------------------------------------------------
+
+class Fiat : public Car {
+public:
+	virtual void start() override;
+	virtual void run() override;
+	virtual void stop() override;
+	Fiat* clone() override;
+	virtual void print(std::ostream&)const override;
+};
+
 //--------------------------------------------------------------------------------------------
 
-Car* createRandomCar()
-{
-	Irand rand{ 0, 6 };
+Car* createRandomCar(void);
 
-	switch (rand()) {
-	case 0: return new Bmw;
-	case 1: return new Mercedes;
-	case 2: return new MercedesS500;
-	case 3: return new Fiat;
-	case 4: return new Renault;
-	case 5: return new Dacia;
-	case 6: return new Volvo;
-	}
+std::ostream& operator<<(std::ostream&, const Car& c);
 
-	return nullptr;
-}
+#endif
