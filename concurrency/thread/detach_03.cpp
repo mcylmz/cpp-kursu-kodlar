@@ -1,6 +1,6 @@
 //foo işlevi içindeki yerel değişken ival'in ömrü bitmesine karşılık oluşturulan thread'in çalışması devam ediyor olabilir
 
-#include <thread>
+void f(int);
 
 class Functor {
 public:
@@ -8,7 +8,7 @@ public:
 	void operator()()
 	{
 		for (int i = 0; i < 100000; ++i) {
-			//...
+			f(mr);
 		}
 	}
 private:
