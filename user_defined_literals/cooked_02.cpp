@@ -1,8 +1,8 @@
 //cooked usef defined literals
 
-constexpr double operator"" _fag(long double degrees)
+constexpr double operator"" _fag(long double fdegrees)
 {
-	return static_cast<double>((degrees - 32) / 1.8);
+	return static_cast<double>((fdegrees - 32) / 1.8);
 }
 
 #include <iostream>
