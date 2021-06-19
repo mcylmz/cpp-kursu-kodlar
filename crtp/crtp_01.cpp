@@ -19,7 +19,7 @@ public:
 
 class Cat : public Animal<Cat> {
 public:
-	void make_sound()
+	void make_sound()a
 	{
 		std::cout << "miyav miyav miyav!!!\n";
 	}
@@ -33,13 +33,23 @@ public:
 	}
 };
 
+template<typename T>
+void game(Animal<T>& x)
+{
+	x.cry();
+}
+
 int main()
 {
 	Dog karabas;
 	Cat minnos;
 	Lamb kuzucuk;
 
-	karabas.cry();
+	/*karabas.cry();
 	minnos.cry();
-	kuzucuk.cry();
+	kuzucuk.cry();*/
+
+	game(karabas);
+	game(minnos);
+	game(kuzucuk);
 }
