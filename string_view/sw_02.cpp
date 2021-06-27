@@ -20,7 +20,7 @@ int main()
 	string_view sv3{ str, 6 };
 	cout << "(" << sv3 << ")\n";
 
-	string_view sv4{ s }; 
+	string_view sv4{ s };
 	cout << "(" << sv4 << ")\n";
 
 	string_view sv5{ s.data() + 11, 4 };
@@ -28,10 +28,8 @@ int main()
 
 	string_view sv6{ ar.data(), size(ar) };
 	cout << "(" << sv6 << ")\n";
+
+	string_view sv7{ str, str + 3};
+	cout << "(" << sv7 << ")\n";
 }
 
-
-/*
-	string_view sınıfının kurucu işlevleri
-	sınıfın range parametreli kurucu işlevi yok. (Bu konuda bir öneri verilmiş)
-*/
