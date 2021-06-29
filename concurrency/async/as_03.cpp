@@ -23,6 +23,7 @@ int main()
 	dvec.back() = -1;
 
 	std::vector<std::future<double>> ftr_vec;
+	ftr_vec.reserve(dvec.size());
 
 	for (auto dval : dvec) {
 		ftr_vec.push_back(std::async(square_root, dval));
