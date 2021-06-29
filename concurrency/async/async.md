@@ -4,8 +4,9 @@ Fonksiyonun basitleştirilmiş bildirimi şöyle:
 future asynch(std::launch, F func, args...);
 ```
 
-Birinci parametre launch policy. 
+Birinci parametre launch policy. <br>
 enum class launch. (bitsel işlemlere uygun tür)
+
 
 ## Bu parametreye std::launch::async geçilirse
 + func fonksiyonunu args argümanları ile asenkron olarak başlatmaya çalışır. (paralel thread olarak). 
