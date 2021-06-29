@@ -18,4 +18,10 @@ Sonuç bir _shared state_ içinde tutuluyor. Bu shared state
 oluşturulmuş olabilir. _std::future_ nesnesi oluşturulduğubnda onun tutacağı sonuç henüz hazır olmayabilir. Gelecekte olulşacakl bir sonucu tutmak için olanaklara sahip.
   
   
-Sonuç sadece bir kez _get_ edilebilir. Bir kez _get()_ fonksiyonu çağrıldıktan sonra _future_ nesnesi geçersiz hale gelir.
+Sonuç sadece bir kez _get_ edilebilir. Bir kez _get()_ fonksiyonu çağrıldıktan sonra _future_ nesnesi geçersiz hale gelir. <br>
+Geçersiz bir future nesnei için sadece 
++ destructor
++ valid()
++ move assignment
+
+işlevleri çağrılabilir. Başka bir işlevin çağrılması tanımsız davranıştır.
