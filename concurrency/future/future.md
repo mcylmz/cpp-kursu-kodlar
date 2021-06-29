@@ -10,12 +10,12 @@ template<> class future<void>; //void türü için explicit specialization
 
 ```
 
-Sonuç bir _shared state_ içinde tutuluyor. <br>
-Bu shared state 
+Sonuç bir _shared state_ içinde tutuluyor. Bu shared state 
 + std::async fonksiyonu tarafından
 + std::packaged_task tarafından
 + std::promise tarafından
   
-oluşturulmuş olabilir. std::future nesnesi oluşturulduğubnda onun tutacağı sonuç henüz hazır olmayabilir. Gelecekte olulşacakl bir sonucu tutmak için olanaklara sahiğp.
+oluşturulmuş olabilir. _std::future_ nesnesi oluşturulduğubnda onun tutacağı sonuç henüz hazır olmayabilir. Gelecekte olulşacakl bir sonucu tutmak için olanaklara sahip.
   
- sonuö sadece bir kez get edilebilir.
+  
+Sonuç sadece bir kez _get_ edilebilir. Bir kez _get()_ fonksiyonu çağrıldıktan sonra _future_ nesnesi geçersiz hale gelir.
