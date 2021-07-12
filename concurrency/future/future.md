@@ -1,12 +1,14 @@
-std:future, standart _/<future>_ başlık dosyasında tanımlanmış bir sınıf şablonu. (C++11)
+std:future, standart _\<future>_ başlık dosyasında tanımlanmış bir sınıf şablonu. (C++11)
 Bir operasyonun sonucunu temsil ediyor. (Ya çalıştırılacak bir fonksiyonun geri dönüş değeri ya da çalıştırılacak fonksiyondan gönderilecek exception. Ama ikisi birden değil)
 
 ```
 template <class T> class future; 
 
-template <class T > class future<T&>;  //partial specialization
+template <class T > 
+class future<T&>;  //partial specialization
 
-template<> class future<void>; //void türü için explicit specialization 
+template<> 
+class future<void>; //void türü için explicit specialization 
 
 ```
 
