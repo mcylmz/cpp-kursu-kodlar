@@ -13,6 +13,17 @@ public:
 		std::cout << std::endl;
 	}
 
+	//alternatif kod (scoped_lock dile eklenmeden önce
+	/*
+	void swap(Buffer& other)
+	{
+		std::lock(mtx, other.mtx);
+		std::lock_guard guard1{ mtx, std::adopt_lock };
+		std::lock_guard guard2{ other.mtx, std::adopt_lock };
+		std::swap(cvec, other.cvec);
+	}
+	*/
+
 	void swap(Buffer& other)
 	{
 		std::scoped_lock guard{ mtx, other.mtx };
