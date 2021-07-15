@@ -3,16 +3,10 @@
   template <class E>
   exception_ptr make_exception_ptr (E e) noexcept;
 
-  Fonksiyon kendisilen 
+  Fonksiyon kendisine gönderilen exception'dan bir exception_ptr nesnesi oluşturarak onu döndürüyor:
 
-The behavior of this function template is equivalent to:
-1
-2
-3
-4
-5
-6
-7
+Bu fonksiyon şablonunun kodunun aşağıdaki gibi olduğu düşünülebilir:
+
 template <class E> exception_ptr make_exception_ptr (E e) noexcept {
   try {
      throw e;
