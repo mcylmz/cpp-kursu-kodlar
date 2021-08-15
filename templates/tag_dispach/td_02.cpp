@@ -1,27 +1,34 @@
-#include <type_traits>
+#include <iterator>
 
-template <typename T>
-int  f_impl(T t, std::true_type) 
-{
-    return 42 + t;
+namespace details {
+    template <typename Raniter, typename Distance>
+    void advance(Raniter& it, Distance n, std::random_access_iterator_tag) 
+    {
+        it += n;
+    }
+
+    template <typename Biditer, typename Distance>
+    void advance(Biditer& it, Distance n, std::bidirectional_iterator_tag) 
+    {
+        if (n > 0) {
+            while (n--) ++it;
+        }
+        else {
+            while (n++) --it;
+        }
+    }
+
+    template <typename Initer, typename Distance>
+    void advance(Initer& it, Distance n, std::input_iterator_tag) {
+        while (n--) {
+            ++it;
+        }
+    }
 }
 
-template <typename T>
-double f_impl(T, std::false_type) 
+template <typename Iter, typename Distance>
+void advance(Iter& it, Distance n) 
 {
-    return 3.14;
-}
-
-template <typename T>
-auto f(T t) -> decltype(f_impl(t, std::is_integral<T>())) 
-{
-    return f_impl(t, std::is_integral<T>{});
-}
-
-#include <iostream>
-
-int main() 
-{
-    std::cout << f(1) << "\n";
-    std::cout << f(1.2) << "\n";
+    details::advance(it, n,
+        typename std::iterator_traits<Iter>::iterator_category{});
 }
