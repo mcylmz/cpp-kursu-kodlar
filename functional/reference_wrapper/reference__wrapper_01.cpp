@@ -1,3 +1,7 @@
+/*
+	reference_wrapper is a rebindable reference
+*/
+
 #include <functional>
 #include <iostream>
 
@@ -9,7 +13,8 @@ int main()
 
 	reference_wrapper<int> r = x;
 
-	r = y;
+	r = y;  //x'e y atanmıyor r y'ye bağlanıyor.
+
 	std::cout << "x = " << x << "\n";
 	r.get() = x;
 	std::cout << "y = " << y << "\n";
