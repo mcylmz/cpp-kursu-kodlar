@@ -3,7 +3,6 @@
 #include <string>
 #include "date.h"  //kendi modülümüz
 
-
 int main()
 {
 	using namespace std;
