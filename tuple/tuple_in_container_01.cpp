@@ -8,7 +8,6 @@
 
 using info = std::tuple<int, std::string, std::string, Date>;
 
-
 int main()
 {
 	using namespace std;
