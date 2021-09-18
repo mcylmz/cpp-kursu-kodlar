@@ -1,8 +1,9 @@
+//bitset sınıfının inserter işlevi var. Bir çıkış akımına verebiliriz.
+
 #include <bitset>
 #include <iostream>
 
 using namespace std;
-
 
 int main()
 {
