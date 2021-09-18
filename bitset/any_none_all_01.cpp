@@ -1,3 +1,5 @@
+//std::bitset sınıfının any, none ve all işlevleri
+
 #include <iostream>
 #include <bitset>
 
