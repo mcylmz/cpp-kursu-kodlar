@@ -1,3 +1,5 @@
+//bir tam sayıyı 2'lik sayı sisteminde yazdırmanın pratik yolu
+
 #include <bitset>
 #include <iostream>
 
