@@ -1,3 +1,5 @@
+// std::bitset<> sınıfının count işleviyle set edilmiş bitleri saydırabiliriz.
+
 #include <iostream>
 #include <bitset>
 
