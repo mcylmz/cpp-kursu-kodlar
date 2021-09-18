@@ -1,3 +1,5 @@
+//bitset sınıfının == ve != fonksiyonları var ancak diğer karşılaştırma fonksiyonları yok
+
 #include <bitset>
 #include <iostream>
 
@@ -16,5 +18,4 @@ int main()
 	cout << (bx != by) << "\n";
 
 	//bs < by; //yok boyle bir operator
-
 }
