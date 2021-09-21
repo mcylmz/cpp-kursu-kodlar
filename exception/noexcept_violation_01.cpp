@@ -1,6 +1,6 @@
 #include <exception>
 #include <iostream>
-#include "nutility.h"
+#include <cstdlib>
 
 void func()
 {
@@ -14,6 +14,12 @@ void foo()noexcept
 
 // foo fonksiyonu noexcept olarak nitelendiğinden çalışma zamanında exception gönderdiğinde
 //derleyici terminate işlevini çağıracak. Yani aşağıdaki kodda exception yakalanamayacak.
+
+void my_terminate(void)
+{
+	std::cout << "my terminate called\n";
+	std::abort();
+}
 
 int main()
 {
