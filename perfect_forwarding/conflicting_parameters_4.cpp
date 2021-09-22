@@ -1,10 +1,10 @@
 #include <vector>
 #include <string>
 
-template<typename ElemType, typename T>
-void insert(std::vector<ElemType>& vec, T&& elem)
+template<typename Container, typename T>
+void insert(Container &con, T && elem)
 {
-	vec.push_back(std::forward<T>(elem));
+	con.push_back(std::forward<T>(elem));
 }
 
 int main()
