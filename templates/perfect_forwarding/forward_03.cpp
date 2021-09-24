@@ -32,7 +32,7 @@ int main()
 {
 	Nec n;
 	const Nec cn;
-	auto call_f = [](auto&& x) {f(std::forward<decltype(x)&&>(x)); };
+	auto call_f = [](auto&& x) {f(std::forward<decltype(x)>(x)); };
 
 	f(n);
 	call_f(n);
