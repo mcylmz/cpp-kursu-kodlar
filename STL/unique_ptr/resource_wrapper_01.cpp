@@ -18,5 +18,4 @@ int main()
 	{
 		std::unique_ptr<Data, DataCleaner> uptr{ createData() };
 	}
-
 }
