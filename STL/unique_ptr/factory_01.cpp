@@ -10,5 +10,4 @@ int main()
 {
 	auto p1 = make_triple(1, 2, 3);
 	auto p2 = make_triple(-1, -2, -3);
-
 }
