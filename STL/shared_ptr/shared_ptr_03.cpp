@@ -15,6 +15,6 @@ int main()
 		std::cout << "use count = " << sp.use_count() << "\n";
 		//cout << boolalpha << sp.unique() << "\n";
 	}
-	std::cout << "bir tusa basin "; std::getchar();
+	std::cout << "bir tusa basin "; (void)std::getchar();
 	std::cout << "main devam ediyor\n";
 }
