@@ -11,6 +11,6 @@ int main()
 
 	upx = nullptr;
 
-	getchar();
+	(void)getchar();
 	cout << (upx ? "dolu" : "bos") << "\n";
 }
