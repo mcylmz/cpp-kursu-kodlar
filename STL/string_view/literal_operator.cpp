@@ -13,6 +13,6 @@ int main()
 }
 
 /*
-	string_view user defined literals
+	std::string_view user defined literals
 	son ek olarak sv kullanılıyor
 */
