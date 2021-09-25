@@ -11,5 +11,6 @@ int main()
 		delete p;
 	};
 
-	unique_ptr<string, decltype(f)> uptr{ new string{"ahmet aksoy"}, f };
+	//unique_ptr<string, decltype(f)> uptr{ new string{"ahmet aksoy"}, f };
+	unique_ptr<string, decltype(f)> uptr{ new string{"ahmet aksoy"}}; //C++20
 }
