@@ -54,9 +54,20 @@ int main()
 	Nec nx;
 	Nec cnec;
 
-	f(foo_ret_lref(nx));
+	/*f(foo_ret_lref(nx));
 	f(foo_ret_const_lref(nx));
 	f(foo_ret_rref(Nec{}));
 	f(foo_ret_const_rref(std::move(cnec)));
-	f(foo_ret_value());
+	f(foo_ret_value());*/
+
+	auto &&r1 = foo_ret_lref(nx);
+	f(std::forward<decltype(r1)>(r1));
+	auto&& r2 = foo_ret_const_lref(nx);
+	f(std::forward<decltype(r2)>(r2));
+	auto&& r3 = foo_ret_rref(Nec{});
+	f(std::forward<decltype(r3)>(r3));
+	auto&& r4 = foo_ret_const_rref(std::move(cnec));
+	f(std::forward<decltype(r4)>(r4));
+	auto&& r5 = foo_ret_value();
+	f(std::forward<decltype(r5)>(r5));
 }
