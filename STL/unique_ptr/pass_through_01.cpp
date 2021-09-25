@@ -1,15 +1,14 @@
 #include <memory>
 #include "triple.h"
 
-
 //pass-through
-std::unique_ptr<Triple> 
+std::unique_ptr<Triple>
 func(std::unique_ptr<Triple> uptr)
 {
 	std::cout << *uptr << "\n";
 	uptr->set(0, 0, 0);
 	///
-	return move(uptr);
+	return uptr;
 }
 
 int main()
