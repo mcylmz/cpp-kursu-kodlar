@@ -42,6 +42,13 @@ const Nec&& foo_ret_const_rref(const Nec&& r)
 	return std::move(r);
 }
 
+Nec foo_ret_value()
+{
+	Nec nec;
+
+	return nec;
+}
+
 int main()
 {
 	Nec nx;
@@ -51,4 +58,5 @@ int main()
 	f(foo_ret_const_lref(nx));
 	f(foo_ret_rref(Nec{}));
 	f(foo_ret_const_rref(std::move(cnec)));
+	f(foo_ret_value());
 }
