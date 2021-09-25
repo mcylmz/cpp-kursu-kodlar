@@ -17,10 +17,11 @@ int main()
 	cout << "wp.use_count()   = " << wp.use_count() << "\n";
 
 	try {
-		shared_ptr<Date> spx(wp);
+		shared_ptr<Date> spx(wp); //throws std::bad_weak_ptr
 		cout << *spx << "\n";
 	}
-	catch (const exception& ex) {
+	//catch (const exception& ex) {
+	catch (const std::bad_weak_ptr& ex) {
 		cout << "hata yakalandi : " << ex.what() << "\n";
 	}
 }
