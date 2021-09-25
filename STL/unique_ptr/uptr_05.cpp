@@ -6,7 +6,7 @@ int main()
 {
 	using namespace std;
 	
-	std::cout << "main basladi\n";
+	cout << "main basladi\n";
 
 	{
 		unique_ptr<Triple> upx{ new Triple{10, 20, 30} };
@@ -18,5 +18,5 @@ int main()
 		cout << "blok sonu\n";
 	}
 
-	std::cout << "main devam ediyor\n";
+	cout << "main devam ediyor\n";
 }
