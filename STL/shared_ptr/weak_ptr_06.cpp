@@ -5,10 +5,10 @@
 using namespace std;
 
 class Dog {
-	weak_ptr<Dog> mp_friend;   //köpeğin arkadaşını tutacak
+	std::weak_ptr<Dog> mp_friend;   //köpeğin arkadaşını tutacak
 	std::string m_name;
 public:
-	Dog(const std::string& name) : m_name(name)
+	Dog(std::string name) : m_name(std::move(name))
 	{
 		std::cout << "kopek " << m_name << " olusturuldu" << std::endl;
 	}
