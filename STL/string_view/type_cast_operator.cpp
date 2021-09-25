@@ -14,6 +14,6 @@ int main()
 }
 
 /*
-	string sınıfının string_view sınıfına otomatik dönüşüm yapacak (explicit olmayan)
-	operator string_view tür dönüştürme operatör fonksiyonu var.
+	std::string sınıfının std::string_view sınıfına otomatik dönüşüm yapacak (explicit olmayan)
+	operator std::string_view tür dönüştürme operatör fonksiyonu var.
 */
