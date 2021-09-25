@@ -7,6 +7,7 @@ using NecPtr = std::unique_ptr<Triple>;
 int main()
 {
 	using namespace std;
+
 	vector<NecPtr> myvec;
 
 	for (int i = 0; i < 5; ++i)
@@ -17,15 +18,12 @@ int main()
 
 	myvec.push_back(unique_ptr<Triple>{new Triple{ -1, -1, -1 }});
 
-
 	{
 		auto uptr = move(myvec[3]);
-	
+
 	}
-	getchar();
 
-	std::cout << "main devam ediyor\n";
+	(void)getchar();
+
+	cout << "main devam ediyor\n";
 }
-
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
