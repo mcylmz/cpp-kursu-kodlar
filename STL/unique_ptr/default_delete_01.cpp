@@ -8,7 +8,7 @@ struct DefaultDelete {
 
 template<typename T, typename D = DefaultDelete<T>>
 class UniquePtr {
-
+	//...
 	~UniquePtr()
 	{
 		if (mp)
