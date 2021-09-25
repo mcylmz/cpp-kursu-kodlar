@@ -11,6 +11,6 @@ int main()
 	{
 		unique_ptr<Triple> upx{ ptr };
 	}
-	getchar();
-	unique_ptr<Triple> upy{ ptr };
+	(void)getchar();
+	unique_ptr<Triple> upy{ ptr };  //ub, ptr is a dangling pointer
 }
