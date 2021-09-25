@@ -1,13 +1,11 @@
 #include <memory>
-#include "nutility.h"
 #include "triple.h"
 #include <iostream>
 
-using namespace std;
 
 void func()
 {
-	throw std::exception{};
+	//throw std::exception{};
 }
 
 int main()
@@ -16,17 +14,17 @@ int main()
 
 
 	try {
-		unique_ptr<Triple>upx(new Triple{ 10, 20, 30 });
+		std::unique_ptr<Triple>upx(new Triple{ 10, 20, 30 });
 
-		cout << (upx ? "dolu" : "bos") << "\n";
-		cout << *upx << "\n";
+		std::cout << (upx ? "dolu" : "bos") << "\n";
+		std::cout << *upx << "\n";
 		upx->set(3, 6, 7);
 		func();
-		cout << *upx << "\n";
-		cout << "blok sonu\n";
+		std::cout << *upx << "\n";
+		std::cout << "blok sonu\n";
 	}
 	catch (const std::exception& ex) {
-		std::cout << "hata yakalandi\n";
+		std::cout << "hata yakalandi: " << ex.what() << "\n";
 
 	}
 
