@@ -2,11 +2,10 @@
 #include <iostream>
 #include <string>
 
-
-
 int main()
 {
 	using namespace std;
+
 	unique_ptr<string> upx;
 
 	if (upx)
@@ -28,6 +27,4 @@ int main()
 		cout << "dolu\n";
 	else
 		cout << "bos\n";
-
-
 }
