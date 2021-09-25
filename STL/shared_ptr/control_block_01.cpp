@@ -1,4 +1,4 @@
-//Bu ornek shared ptr nesnelerinin kullandigi kontro bloguyla ilgili
+//Bu ornek shared ptr nesnelerinin kullandigi kontrol bloguyla ilgili
 
 #include <iostream>
 #include <memory>
@@ -39,9 +39,6 @@ void f2()
 
 int main()
 {
-	f1();
+	//f1();
 	f2();
 }
-
-
-
