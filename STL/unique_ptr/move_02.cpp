@@ -13,9 +13,9 @@ int main()
 	cout << "upy = " << (upy ? "dolu" : "bos") << "\n";
 	cout << "*upx = " << *upx << "\n";
 	cout << "*upy = " << *upy << "\n";
-	getchar();
+	(void) getchar();
 	upx = move(upy);
 	cout << "upx = " << (upx ? "dolu" : "bos") << "\n";
 	cout << "upy = " << (upy ? "dolu" : "bos") << "\n";
-	getchar();
+	(void) getchar();
 }
