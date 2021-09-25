@@ -10,6 +10,6 @@ int main()
 	cout << (upx ? "dolu" : "bos") << "\n";
 
 	upx.reset(new Triple{ -1, -2, -3 });
-	getchar();
+	(void)getchar();
 	cout << (upx ? "dolu" : "bos") << "\n";
 }
