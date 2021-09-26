@@ -6,6 +6,6 @@ int main()
 	decltype(x) y;
 	decltype(x) z;
 
-	std::cout << y() << y() << y() << '\n';
-	std::cout << z() << z() << z() << '\n';
+	std::cout << y() << y() << y();
+	std::cout << z() << z() << z();
 }
