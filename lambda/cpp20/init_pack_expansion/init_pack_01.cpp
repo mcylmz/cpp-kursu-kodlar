@@ -2,7 +2,6 @@
 
 template<class F, class... Args>
 auto delay_invoke(F f, Args... args) {
-    // the capture here can also be just [=]
     return[f, args...]() -> decltype(auto) {
         return std::invoke(f, args...);
     };
