@@ -1,5 +1,14 @@
+#include <string>
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <iomanip>
+#include <algorithm>
+
 int main()
 {
+	using namespace std;
+
 	string str;
 	cout << "bir yazi giriniz: ";
 	getline(cin, str);
