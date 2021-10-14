@@ -9,4 +9,5 @@ int main()
 {
     34_pr;
     56.78_pr;
+    operator""_pr("3456");
 }
