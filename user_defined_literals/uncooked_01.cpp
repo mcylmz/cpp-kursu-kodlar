@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 unsigned int operator"" _b(const char* p)
 {
 	unsigned uval = 0;
