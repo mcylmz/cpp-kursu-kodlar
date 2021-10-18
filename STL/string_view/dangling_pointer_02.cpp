@@ -21,9 +21,9 @@ int main()
 	//auto &s1 = getstr(ival);  //gecersiz
 	const auto& s2 = getstr(ival); //life extension
 	auto&& s3 = getstr(ival); //life extension
-	std::string_view s = getstr(ival); //ub
 	const char* p1 = getstr(ival).c_str();  //ub
 	auto p2 = getstr(ival).c_str(); //ub
+	std::string_view s = getstr(ival); //ub
 
 	std::cout << "(" << s << ")\n";
 }
