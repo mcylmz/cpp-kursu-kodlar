@@ -17,6 +17,9 @@ int main()
 	using namespace std::literals;
 
 	std::cout << std::boolalpha;
+	char str[] = "ali";
+
+	func(str);
 	func("ali");
 	func("ali"s);
 	func("ali"sv);
