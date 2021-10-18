@@ -1,3 +1,5 @@
+//sınıfın get fonksiyonlarının std::string_view döndürmesi tanımsız davranışa yol açabilir
+
 #include <string>
 #include <string_view>
 #include <iostream>
