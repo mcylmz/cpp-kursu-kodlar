@@ -1,5 +1,6 @@
 #include <string>
 #include <string_view>
+#include <iostream>
 
 class Person {
 	std::string name_;
@@ -12,9 +13,17 @@ public:
 	}
 };
 
-Person createPerson();
+Person createPerson()
+{
+	Person p{ "necati ergin" };
+	//
+	return p;
+}
 
 int main()
 {
 	auto sv = createPerson().getName();
+
+	//dangling pointer
+	std::cout << sv << "\n";
 }
