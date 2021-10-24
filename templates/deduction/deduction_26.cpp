@@ -7,5 +7,5 @@ int main()
 {
 	func(foo);
 	//func([](int x) {return x; }); //gecersiz
-	func(+[](int x) {return x; }); //gecerli
+	func(+[](int x) {return x; }); //gecerli  - positive lambda idiom
 }
