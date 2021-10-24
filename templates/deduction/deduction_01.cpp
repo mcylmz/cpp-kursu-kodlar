@@ -6,12 +6,12 @@ class TypeTeller;
 template<typename T>
 void func(T &&)
 {
-	TypeTeller<T> x;
+    TypeTeller<T> x;
 }
 
 int main()
 {
-	int a{};
-	//func(10);
-	//func(a);
+    int a{};
+    //func(10);
+    //func(a);
 }
