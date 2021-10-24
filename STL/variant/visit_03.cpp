@@ -6,7 +6,7 @@
 
 class Cat {
 public:
-	Cat(std::string name) : m_name{ name } {}
+	Cat(std::string name) : m_name{ std::move(name) } {}
 	void meow() const
 	{
 		std::cout << m_name << " miyavliyor!\n";
@@ -19,7 +19,7 @@ private:
 
 class Dog {
 public:
-	Dog(const std::string name) : m_name{ name } {}
+	Dog(const std::string name) : m_name{ std::move(name)} {}
 	void woof() const
 	{
 		std::cout << m_name << " havliyor!\n";
@@ -32,7 +32,7 @@ private:
 
 class Lamb {
 public:
-	Lamb(const std::string name) : m_name{ name } {}
+	Lamb(const std::string name) : m_name{ std::move(name)} {}
 	void bleat() const
 	{
 		std::cout << m_name << " meliyor!\n";
