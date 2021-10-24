@@ -35,4 +35,6 @@ int main()
 	std::cout << "index = " << v2.index() << "\n";
 	v2 = std::monostate{};
 	std::cout << "index = " << v2.index() << "\n";
+	v2 = {};
+	std::cout << "index = " << v2.index() << "\n";
 }
