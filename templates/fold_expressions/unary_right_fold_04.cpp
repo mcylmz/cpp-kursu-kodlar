@@ -1,10 +1,10 @@
+#include <iostream>
+
 template<typename T, typename ...Args>
 bool all_in_range(const T& min, const T&max, Args && ...args)
 {
 	return ((min <= std::forward<Args>(args) && max >= std::forward<Args>(args))  && ...);
 }
-
-#include <iostream>
 
 int main()
 {
