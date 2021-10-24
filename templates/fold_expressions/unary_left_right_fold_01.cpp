@@ -1,6 +1,6 @@
 /*
 	bu örnek
-	unary left fold ile unary right fold arasındaki farkı 
+	unary left fold ile unary right fold arasındaki farkı
 	göstermeye yönelik.
 */
 
@@ -9,13 +9,13 @@
 template<typename ...Args>
 auto fdiv_r(Args && ...args)
 {
-	return (std::forward<Args>(args) / ...);
+	return (std::forward<Args>(args) / ...);  //unary right fold
 }
 
 template<typename ...Args>
 auto fdiv_l(Args && ...args)
 {
-	return (... / std::forward<Args>(args));
+	return (... / std::forward<Args>(args)); //unary left fold
 }
 
 #include <iostream>
