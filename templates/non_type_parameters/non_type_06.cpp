@@ -1,3 +1,5 @@
+#include <iostream>
+
 template<typename T, int N, int M> 
 bool less(T(&a)[N], T(&b)[M])
 {
@@ -11,4 +13,14 @@ bool less(T(&a)[N], T(&b)[M])
 	} 
 	
 	return N < M;
+}
+
+int main()
+{
+	int a[] = { 3, 7, 9 };
+	int b[] = { 3, 7, 9, 2, 6 };
+	int c[] = { 3, 7, 9, 3, 6 };
+
+	std::cout << std::boolalpha << less(a, b) << '\n';
+	std::cout << std::boolalpha << less(c, b) << '\n';
 }
