@@ -8,4 +8,6 @@ int main()
     std::visit(f, var);
     var = 123;
     std::visit(f, var);
+    var = 4.7;
+    std::visit(f, var);
 }
