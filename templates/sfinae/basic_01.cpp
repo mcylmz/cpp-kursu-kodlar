@@ -21,4 +21,7 @@ int main()
 	int* p{};
 	//std::cout << len(p); //gecersiz
 
+	std::allocator<int> x;
+	std::cout << len(x); //gecersiz
+
 }
