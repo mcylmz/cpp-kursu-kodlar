@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 template<typename T, unsigned N>
 std::size_t len(T(&)[N])
 {
@@ -17,4 +18,7 @@ int main()
 	int a[10]{};
 	std::cout << len(a); 
 	std::cout << len("tmp"); 
+	int* p{};
+	//std::cout << len(p); //gecersiz
+
 }
