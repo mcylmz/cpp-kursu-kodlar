@@ -10,7 +10,7 @@ private:
 public:
 	Array(Array<T> const&);
 	Array<T>& operator= (Array<T> const&);
-	void exhange_with(Array<T>* b) 
+	void exchange_with(Array<T>* b) 
 	{
 		T* tmp = data;
 		data = b->data;
