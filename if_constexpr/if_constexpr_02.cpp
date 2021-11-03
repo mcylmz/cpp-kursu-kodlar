@@ -11,7 +11,8 @@ void func(T tx)
 	}
 	else {
 		//undeclared_f(); //syntax error
-		static_assert(false, "not integral type");
+		//undeclared(f);
+		//static_assert(false, "not integral type"); //syntax error
 	}
 }
 
