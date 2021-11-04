@@ -1,3 +1,5 @@
+//compile-time recursive pack expansion
+
 #include <ostream>
 
 template<typename T>
