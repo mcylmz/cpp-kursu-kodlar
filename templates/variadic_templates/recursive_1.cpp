@@ -1,6 +1,6 @@
-#include <iostream>
-
 ///compile time recursive pack expansion
+
+#include <iostream>
 
 template <typename T>
 void print(const T& r)
