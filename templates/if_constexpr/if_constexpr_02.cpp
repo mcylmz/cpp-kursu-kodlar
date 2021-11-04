@@ -10,13 +10,14 @@ void func(T tx)
 		}
 	}
 	else {
-		//undeclared_f(); //syntax error
-		//undeclared(f);
+		//undeclared_f(); //syntax error (name non dependant on template parameter)
+		undeclared(tx);   //error if else part isnatntiated
 		//static_assert(false, "not integral type"); //syntax error
 	}
 }
 
 int main()
 {
-	func<double>(2);
+	func(2);
+	//func(2.5);
 }
