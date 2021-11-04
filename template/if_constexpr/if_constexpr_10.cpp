@@ -1,14 +1,4 @@
 template<int N>
-constexpr int fibonacci() { return fibonacci<N - 1>() + fibonacci<N - 2>(); }
-
-template<>
-constexpr int fibonacci<1>() { return 1; }
-
-template<>
-constexpr int fibonacci<0>() { return 0; }
-
-
-template<int N>
 constexpr int fibo()
 {
     if constexpr (N >= 2)
@@ -19,6 +9,5 @@ constexpr int fibo()
 
 int main()
 {
-    constexpr auto x = fibonacci<8>();
     constexpr auto y = fibo<8>();
 }
