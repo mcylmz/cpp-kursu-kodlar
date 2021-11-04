@@ -11,8 +11,6 @@ void func(T x)
 
 int main()
 {
-	using namespace std;
-
 	func(20);
 	func(2.3);
 }
