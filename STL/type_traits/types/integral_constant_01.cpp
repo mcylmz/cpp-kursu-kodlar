@@ -4,7 +4,7 @@ struct integral_constant {
     using value_type = T;
     using type = integral_constant; // using injected-class-name
     constexpr operator value_type() const noexcept { return value; }
-    constexpr value_type operator()() const noexcept { return value; } C++14
+    constexpr value_type operator()() const noexcept { return value; } // C++14
 };
 
 
