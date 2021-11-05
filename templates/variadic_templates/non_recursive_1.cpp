@@ -4,10 +4,10 @@
 #include <bitset>
 
 template<typename ...Ts>
-std::string serialize(Ts ...args)
+std::string serialize(const Ts& ...args)
 {
 	std::ostringstream os;
-	(void)std::initializer_list<int>{ (os << args, 0)... };
+	(void)std::initializer_list<int>{ (os << args << " ", 0)... };
 	return os.str();
 }
 
