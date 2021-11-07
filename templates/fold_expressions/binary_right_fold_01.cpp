@@ -11,11 +11,6 @@ auto sum(Args&& ...args)
 	return (std::forward<Args>(args) + ... + 10);
 }
 
-template<typename ...Args>
-auto sum2(Args&& ...args)
-{
-	return (std::forward<Args>(args) + ... + 10);
-}
 
 int main()
 {
