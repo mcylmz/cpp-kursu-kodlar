@@ -8,12 +8,9 @@ decltype(auto) push_back(std::vector<T>& vec, TS&& ...args)
 	return (vec);
 }
 
-
-using namespace std;
-
 int main()
 {
-	vector<int> ivec;
+	std::vector<int> ivec;
 
 	push_back(ivec, 1, 2, 3, 4).push_back(5);
 	
