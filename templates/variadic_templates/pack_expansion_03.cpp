@@ -1,7 +1,5 @@
 #include <iostream>
 
-
-
 struct X { 
 	X(int i)
 	{
