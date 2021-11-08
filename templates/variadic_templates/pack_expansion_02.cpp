@@ -1,16 +1,18 @@
 #include <iostream>
-#include <tuple>
+
+template<typename ...TS>
+class Var {
+public:
+	Var()
+	{
+		std::cout << typeid(Var).name() << '\n';
+	}
+};
 
 template <typename ...Types>
-class Mytuple : public std::tuple<Types* ...>{ //
-	//
-};
-
-class Mytuple_ : public std::tuple<int*, double*> {
-
-};
+class Myclass : public Var<Types* ...> { };
 
 int main()
 {
-	Mytuple<int, double> x;
+	Myclass<int, double, long> x;
 }
