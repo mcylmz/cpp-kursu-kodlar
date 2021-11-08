@@ -1,13 +1,18 @@
 #include <iostream>
 #include <tuple>
 
+template<typename ...TS>
+class Var {
+	//...
+};
+
 template <typename ...Types>
-class Mytuple : public std::tuple<Types...>{
+class Myclass : public Var<Types...> {
 public:
 	constexpr static size_t size = sizeof...(Types);
 };
 
 int main()
 {
-	constexpr auto n = Mytuple<int, double>::size;
+	constexpr auto n = Myclass<int, double>::size;
 }
