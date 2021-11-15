@@ -1,38 +1,71 @@
-class MBase {
-public:
-	void f1();
-	void f2();
-	void f3();
-};
-
+#include <iostream>
 
 template <typename Base>
-class SkillA : public Base{
+class SkillA : public Base {
 public:
 	void afunc()
 	{
-		Base::f1(); Base::f2();
-		//...
+		std::cout << "skill A is running\n";
+		Base::foo(); 
+		Base::bar();
+		std::cout << "-----------------------------------------\n";
 	}
 };
-
 
 template <typename Base>
 class SkillB : public Base {
 public:
 	void bfunc()
 	{
-		Base::f1(); Base::f2();
-		//...
+		std::cout << "skill B is running\n";
+		Base::baz();
+		Base::foo();
+		std::cout << "-----------------------------------------\n";
 	}
 };
 
-using Myclass = SkillB<SkillA<MBase>>;
+template <typename Base>
+class SkillC : public Base {
+public:
+	void cfunc()
+	{
+		std::cout << "skill C is running\n";
+		Base::foo();
+		Base::foo();
+		Base::foo();
+		std::cout << "-----------------------------------------\n";
+	}
+};
+
+
+class Myclass {
+public:
+	void foo()
+	{
+		std::cout << "Myclass::foo()\n";
+	}
+
+	void bar()
+	{
+		std::cout << "Myclass::bar()\n";
+	}
+
+	void baz()
+	{
+		std::cout << "Myclass::baz()\n";
+	}
+};
+
 
 int main()
 {
-	Myclass mx;
+	//SkillA<Myclass>{}.afunc();
+	//SkillB<Myclass>{}.bfunc();
+	//SkillC<Myclass>{}.cfunc();
 
-	mx.afunc();
-	mx.bfunc();
+	SkillA<SkillB<SkillC<Myclass>>> x;
+
+	x.afunc();
+	x.bfunc();
+	x.cfunc();
 }
