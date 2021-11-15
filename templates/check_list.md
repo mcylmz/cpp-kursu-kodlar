@@ -7,6 +7,7 @@
 + class templates
   - explicit (full) specialization
   - partial specialization
+  - friend declarations
 + variable templates
 + alias templates
 
@@ -19,3 +20,6 @@
 # template instantiation
 + point of instantiation
 + template explicit instantiation
+
+# variadic templates
+  + template parameter pack
