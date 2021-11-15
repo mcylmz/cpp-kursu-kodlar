@@ -11,5 +11,4 @@ int main()
 {
 	std::pair px{ 12, 5.6 };  
 	Myclass m{ 10 };  //m is Myclass<int>
-
 }
