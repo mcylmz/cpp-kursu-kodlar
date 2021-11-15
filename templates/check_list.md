@@ -2,7 +2,11 @@
 
 # templates
 + function templates
+  + template argument deduction
+
 + class templates
+  - explicit (full) specialization
+  - partial specialization
 + variable templates
 + alias templates
 
