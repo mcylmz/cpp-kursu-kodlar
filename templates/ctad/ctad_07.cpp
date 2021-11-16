@@ -1,7 +1,6 @@
 #include <vector>
 #include <list>
 #include <set>
-#include <functional>
 
 int main()
 {
