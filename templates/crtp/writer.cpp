@@ -7,7 +7,7 @@ class Writer
 public:
     void write(const char* str) const
     {
-        static_cast<const Der*>(this)->write_impl(str); 
+        static_cast<const Der*>(this)->write_impl(str);
     }
 };
 
@@ -20,7 +20,7 @@ public:
     {
         using namespace std::literals;
         if (!m_file)
-            throw std::runtime_error{ "file: "s + "cannot created" };
+            throw std::runtime_error{ "file: "s + pfilename + "cannot created" };
     }
 
     ~FileWriter() { fclose(m_file); }
