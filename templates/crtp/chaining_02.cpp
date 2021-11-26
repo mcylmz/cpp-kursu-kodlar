@@ -6,29 +6,31 @@ public:
     Printer(std::ostream& pstream) : m_stream(pstream) {}
 
     template <typename T>
-    Printer& print(const T &t) 
+    Printer& print(const T& t)
     {
-        m_stream << t; 
-        return *this; 
+        m_stream << t << ' ';
+        return *this;
     }
 
     template <typename T>
-    Printer& println(const T&t) 
+    Printer& print_line(const T& t)
     {
-        m_stream << t << '\n'; 
-        return *this; 
+        m_stream << t << '\n';
+        return *this;
     }
 private:
     std::ostream& m_stream;
 };
 
+#include <iostream>
 
-class CoutPrinter : public Printer
+
+class ConsolePrinter : public Printer
 {
 public:
-    CoutPrinter() : Printer(std::cout) {}
+    ConsolePrinter() : Printer(std::cout) {}
 
-    CoutPrinter& SetConsoleColor(int color)
+    ConsolePrinter& set_color(int color)
     {
         std::cout << "console color set\n";
         return *this;
@@ -43,5 +45,5 @@ using namespace std;
 
 int main()
 {
-    CoutPrinter().print("Hello ").SetConsoleColor(12).println("Printer!"); // compile error
+    ConsolePrinter().print("Necati ").set_color(12).print_line("Ergin"); // invalid
 }
