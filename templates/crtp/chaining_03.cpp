@@ -14,7 +14,7 @@ public:
     }
 
     template <typename T>
-    ConcretePrinter& println(T&& t)
+    ConcretePrinter& print_line(const T &t)
     {
         m_stream << t << '\n';
         return static_cast<ConcretePrinter&>(*this);
@@ -25,20 +25,18 @@ private:
 
 #include <iostream>
 
-
-
-class CoutPrinter : public Printer<CoutPrinter>
+class ConsolePrinter : public Printer<ConsolePrinter>
 {
 public:
-    CoutPrinter() : Printer(std::cout) {}
+    ConsolePrinter() : Printer(std::cout) {}
 
-    CoutPrinter& SetConsoleColor(int c)
+    ConsolePrinter& set_color(int c)
     {
-       return *this;
+        return *this;
     }
 };
 
 int main()
 {
-    CoutPrinter().print("Hello ").SetConsoleColor(15).println("Printer!");
+    ConsolePrinter().print("Necati").set_color(15).print_line("Ergin");
 }
