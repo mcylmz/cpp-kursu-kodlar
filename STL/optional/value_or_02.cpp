@@ -6,6 +6,6 @@ int main()
 
 	op.value() = 20;
 	op.value_or(0) = 30; //gecersiz
-	//value_or islevini referans döndürmüyor.
+	//value_or islevi referans döndürmüyor.
 	//...
 }
