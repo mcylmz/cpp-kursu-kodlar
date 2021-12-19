@@ -16,10 +16,10 @@ namespace Ali {
 	//...
 }
 
-void func(int)
-{
-	std::cout << "void func(int)\n";
-}
+//void func(int)
+//{
+//	std::cout << "void func(int)\n";
+//}
 
 using namespace Nec;
 using namespace Ali;
