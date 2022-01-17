@@ -1,4 +1,4 @@
-/bu örnek Herb Sutter'in blogundan alınmıştır:
+//bu örnek Herb Sutter'in blogundan alınmıştır:
 
 namespace A {
 	struct X{};
